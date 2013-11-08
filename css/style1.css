@@ -21,13 +21,14 @@
 
 #collapseSummarySet{
   /*display: inline-block;*/
-  background: #ccc none repeat scroll 0 0;
-  
-  height:360px;
-  overflow:scroll;
+  background: #ccc;
+  overflow-x:scroll;
+  overflow-y:hidden; 
+  height: 360px;
+  /* width: 3000px;*/
 }
 
-#moveit1, #moveit2, #moveit3, #moveit4, #moveit5, #moveit6, #moveit7{
+.summaryCard{
  width:260px;
     height:336px;
     border: 2px solid #000000;
@@ -43,13 +44,9 @@
 
 .clickedSummaryData { 
   display:none; 
-/*  position: absolute;
-  margin-top: 200px;*/
+
 }
-/* #info-HiExample, #info-HelloExample, #info-HowdyExample{
-  position:fixed;
-  margin-top: 360px;
-}*/
+
 
 .podView{
   display:none;
@@ -69,6 +66,29 @@ h3{
 
 }
   .clear { clear: both; height: 0; overflow: hidden; }
+
+
+ /****************************************
+  Left Right Scroll
+****************************************/
+
+
+  #wrapper {
+    height: 200px;
+    width: 682px;
+    overflow-x:scroll;
+    overflow-y:hidden; 
+}
+
+/*#container{
+    width:900px;  
+}*/
+
+/*.item{
+    width:60px;
+    padding:10px;
+    float:left;
+}*/
 
  
 

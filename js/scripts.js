@@ -142,7 +142,7 @@ function summaryCardData(){
 //       return false;
 //    }); 
  
- $("#collapseSummarySet").scrollLeft;
+ // $("div#collapseSummarySet").scrollLeft( 300 );
 
 
 
@@ -159,6 +159,12 @@ function summaryCardData(){
 //     ColReorder.fnReset( oTable );
 //     return false;
 //   } );
+
+ var totalwidth = 0;
+$('.summaryCard').each(function(){
+   totalwidth = totalwidth + $(this).outerWidth();
+});
+$('#container').width(totalwidth);
 
 ///////////////////////////////////////////////////////////////////// 
 
