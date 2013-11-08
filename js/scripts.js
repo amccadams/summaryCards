@@ -34,23 +34,35 @@ function summaryCardData(){
 };
 
 
-// Hover for expanding card//  Good
+// // Hover for expanding card//  Good
+// $(".summaryCard").mouseenter(function(){
+//   if($(this).hasClass("fullSummaryView")) {
+//         $(this).animate({"height": "90px"}, 5).removeClass("fullSummaryView "); 
+//       } else {         
+//         $(this).animate({"height": "336px"}, 5).addClass("fullSummaryView");
+// }
+// });
+
+
 $(".summaryCard").mouseenter(function(){
-  if($(this).hasClass("fullSummaryView")) {
-        $(this).animate({"height": "90px"}, 5).removeClass("fullSummaryView "); 
-      } else {         
-        $(this).animate({"height": "336px"}, 5).addClass("fullSummaryView");
-}
+        $(this).animate({"height": "336px"}, 5); 
+           
+});
+
+$(".summaryCard").mouseleave(function(){
+        $(this).animate({"height": "90px"}, 5);     
 });
 
 
 function summaryCardAction(){
 if($(".summaryCard").hasClass("fullSummaryView")) {
-        $(".summaryCard").animate({"height": "90px"}, 5).removeClass("fullSummaryView "); 
+        $(".summaryCard").animate({"height": "330px"}, 5).removeClass("fullSummaryView "); 
       } else {         
-        $(".summaryCard").animate({"height": "336px"}, 5).addClass("fullSummaryView");
+        $(".summaryCard").animate({"height": "90px"}, 5).addClass("fullSummaryView");
 }
 };
+
+
 
 
 
@@ -79,7 +91,7 @@ if($(".summaryCard").hasClass("fullSummaryView")) {
 
 //   //Card function
 // function cardPerformance(){
-// //   var cardStatus 
+//   var cardStatus 
 //   if($("div.summaryCard").hasClass("fullSummaryView")) {
 //     $(this).mouseleave(function(){
 //     $(this).removeClass("fullSummaryView",{"height":"90px"});
