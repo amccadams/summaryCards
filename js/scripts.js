@@ -160,11 +160,11 @@ function summaryCardData(){
 //     return false;
 //   } );
 
- var totalwidth = 0;
-$('.summaryCard').each(function(){
-   totalwidth = totalwidth + $(this).outerWidth();
-});
-$('#container').width(totalwidth);
+//  var totalwidth = 0;
+// $('.summaryCard').each(function(){
+//    totalwidth = totalwidth + $(this).outerWidth();
+// });
+// $('#container').width(totalwidth);
 
 ///////////////////////////////////////////////////////////////////// 
 

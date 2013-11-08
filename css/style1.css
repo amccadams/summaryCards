@@ -1,40 +1,14 @@
 
 
 
-/*.contact{
-    width:162px;
-    height:336px;
-    border: 2px solid #000000;
-  border-radius: 10px;
-    overflow:hidden;
-    float:left;
-    margin: 10px;
 
-    
-}
-.moveit{
-    position: fixed;
-    margin-left: 55px; 
-    margin-top: 15px;
-     z-index:12;
-}*/
 
-#collapseSummarySet{
-  /*display: inline-block;*/
-  background: #ccc;
-  overflow-x:scroll;
-  overflow-y:hidden; 
-  height: 360px;
-  /* width: 3000px;*/
-}
 
 .summaryCard{
  width:260px;
     height:336px;
     border: 2px solid #000000;
   border-radius: 10px;
-    overflow:hidden;
-
      float:left;
     margin-right:10px;
     margin-left: 10px;
@@ -44,15 +18,10 @@
 
 .clickedSummaryData { 
   display:none; 
-
 }
-
-
 .podView{
   display:none;
-
 }
-
  hr{
     border:none;
     height: 5px;
@@ -71,7 +40,15 @@ h3{
  /****************************************
   Left Right Scroll
 ****************************************/
+#collapseSummarySet{
+  /*display: inline-block;*/
+  height: 360px;
+  background: #ccc;
+  overflow-x:scroll;
+  overflow-y:hidden; 
 
+  /* width: 3000px;*/
+}
 
   #wrapper {
     height: 200px;
@@ -80,9 +57,9 @@ h3{
     overflow-y:hidden; 
 }
 
-/*#container{
-    width:900px;  
-}*/
+#container{
+    width:3000px;  
+}
 
 /*.item{
     width:60px;
