@@ -1,5 +1,10 @@
 
+#moveit1, #moveit2, #moveit3, #moveit4, #moveit5, #moveit6, #moveit7{
 
+    overflow:hidden;
+
+   
+}
 
 
 
@@ -42,33 +47,17 @@ h3{
 ****************************************/
 #collapseSummarySet{
   /*display: inline-block;*/
-  height: 360px;
-  background: #ccc;
+/*  height: 360px;*/
+  background-color: #ccc;
+  padding-bottom: 20px;
   overflow-x:scroll;
   overflow-y:hidden; 
 
-  /* width: 3000px;*/
-}
-
-  #wrapper {
-    height: 200px;
-    width: 682px;
-    overflow-x:scroll;
-    overflow-y:hidden; 
 }
 
 #container{
     width:3000px;  
 }
-
-/*.item{
-    width:60px;
-    padding:10px;
-    float:left;
-}*/
-
- 
-
 
  /****************************************
   CSS 3 SEARCH FORM BY CAMERON BANEY

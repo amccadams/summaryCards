@@ -8,7 +8,7 @@ $(document).ready(function () {
 
 //**Shows data clicked on summary card snippet level**//
 
-// $('.currentSummaryData').on('click', summaryCardAction); 
+$('.currentSummaryData').on('click', summaryCardAction); 
 $('.clickData').on('click', findData);
 
 
@@ -20,8 +20,10 @@ function findData(){
   $('.clickedSummaryData').hide();
   $('#'+id).show();
 };
-//*****Click on header to open and close the card view*****//
-// $('.cardHeader').on('click', summaryCardAction);
+ /****************************************
+ Click on header to open and close the card view
+ ****************************************/
+$('.cardHeader').on('click', summaryCardAction);
 
 // Places card info 
 function summaryCardData(){
@@ -33,22 +35,22 @@ function summaryCardData(){
 
 
 // Hover for expanding card//  Good
-// $(".summaryCard").mouseenter(function(){
-//   if($(this).hasClass("fullSummaryView")) {
-//         $(this).animate({"height": "90px"}, 5).removeClass("fullSummaryView "); 
-//       } else {         
-//         $(this).animate({"height": "336px"}, 5).addClass("fullSummaryView");
-// }
-// });
+$(".summaryCard").mouseenter(function(){
+  if($(this).hasClass("fullSummaryView")) {
+        $(this).animate({"height": "90px"}, 5).removeClass("fullSummaryView "); 
+      } else {         
+        $(this).animate({"height": "336px"}, 5).addClass("fullSummaryView");
+}
+});
 
 
-// function summaryCardAction(){
-// if($(".summaryCard").hasClass("fullSummaryView")) {
-//         $(".summaryCard").animate({"height": "90px"}, 5).removeClass("fullSummaryView "); 
-//       } else {         
-//         $(".summaryCard").animate({"height": "336px"}, 5).addClass("fullSummaryView");
-// }
-// };
+function summaryCardAction(){
+if($(".summaryCard").hasClass("fullSummaryView")) {
+        $(".summaryCard").animate({"height": "90px"}, 5).removeClass("fullSummaryView "); 
+      } else {         
+        $(".summaryCard").animate({"height": "336px"}, 5).addClass("fullSummaryView");
+}
+};
 
 
 
