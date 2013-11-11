@@ -2,9 +2,9 @@ $(document).ready(function () {
 
 
 
-// $("#togglebuttonGridPod").click(function(){
-//   $(".gridView, .podView").toggleClass("gridView podView");
-// });
+$("#togglebuttonGridPod").click(function(){
+  $(".gridView, .podView").toggleClass("gridView podView");
+});
 
 //**Shows data clicked on summary card snippet level**//
 
@@ -17,8 +17,9 @@ $('.clickData').on('click', findData);
 
 function findData(){
   var id = $(this).data('details');
-  $('.clickedSummaryData').hide();
+  // $('.clickedSummaryData').hide();
   $('#'+id).show();
+  // summaryCardData();
 };
  /****************************************
  Click on header to open and close the card view
@@ -27,9 +28,9 @@ $('.cardHeader').on('click', summaryCardAction);
 
 // Places card info 
 function summaryCardData(){
-  SummaryCardAction();
+  // SummaryCardAction();
     $(".clickedSummaryData").css("position", "absolute");
-    $(".clickedSummaryData").css("margin-top", "300px");
+    $(".clickedSummaryData").css("margin-top", "-300px");
     $(".clickedSummaryData").show(50);
 };
 
@@ -44,7 +45,7 @@ function summaryCardData(){
 // });
 
 
-$(".summaryCard").mouseenter(function(){
+$(".summaryCard").hover(function(){
         $(this).animate({"height": "336px"}, 5); 
            
 });
@@ -61,6 +62,46 @@ if($(".summaryCard").hasClass("fullSummaryView")) {
         $(".summaryCard").animate({"height": "90px"}, 5).addClass("fullSummaryView");
 }
 };
+
+// $('.addNewIcon').click(function(){
+//   var $this =($(this);
+//      $("#tooltipBox").html(function(){
+//       $('.ttip').css({
+//          left: $this.position() + '20px',
+//             top: $this.position() + '50px'
+//       });
+//      });
+
+$('.addNewIcon').click(function() {
+    var $this = $(this);
+    $("#darkenBackground").css({
+        "opacity": "0.3"
+    }).fadeIn("slow");
+
+
+    $("#large").html(function() {
+        $('.ttip')
+        // .css({
+        //     left: $this.position() + '10px',
+        //     top: $this.position() + '200px'
+        // })
+        .show(500)
+
+    }).fadeIn("slow");
+
+
+});
+
+$('.note').on('click', function() {
+    $('.ttip').hide(500);
+    $("#darkenBackground").fadeOut("slow");
+    $("#large").fadeOut("slow");
+
+});
+$("#large").click(function() {
+    $(this).fadeOut();
+   
+});
 
 
 

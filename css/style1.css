@@ -1,20 +1,17 @@
 
 #moveit1, #moveit2, #moveit3, #moveit4, #moveit5, #moveit6, #moveit7{
-
-    overflow:hidden;
-
-   
+    overflow:hidden;  
 }
 
 
 
 
 .summaryCard{
- width:260px;
+    width:260px;
     height:336px;
     border: 2px solid #000000;
-  border-radius: 10px;
-     float:left;
+    border-radius: 10px;
+    float:left;
     margin-right:10px;
     margin-left: 10px;
     margin-top: 15px;
@@ -24,8 +21,13 @@ div.summaryCard:hover{
   height:336px;
 }
 
-.clickedSummaryData { 
+.clickedSummaryData{ 
   display:none; 
+   border: 2px solid #000000;
+   width: 75%;
+   margin-left: 50px;
+   padding-bottom: 15px;
+   margin-bottom: 50px;
 }
 .podView{
   display:none;
@@ -39,8 +41,71 @@ h3{
   line-height: 1em;
 }
 
-.searchStyle{
+.addNewIcon{
+  float: right;
+  margin-top: -45px;
+}
+/*#tooltipBox{
+display:none;
+position: absolute;
+background: red;
+padding: 0px;
+z-index: 10;
+min-height: 0px;
+min-width: 0px;
+color: #336699;
+}*/
 
+
+.ttip {
+    position: absolute;
+    width: 350px;
+    height: 100px;
+    color: #fff;
+    padding: 20px;
+    -webkit-box-shadow: 0 1px 2px #303030;
+    -moz-box-shadow: 0 1px 2px #303030;
+    box-shadow: 0 1px 2px #303030;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    -o-border-radius: 8px 8px 8px 8px;
+    background-image:-moz-linear-gradient(top, #F45000, #FF8000);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F45000), to(#FF8000));
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F45000', endColorstr='#FF8000', GradientType=0);
+    background-color:#000;
+    display: none
+}
+.contents {
+    font-size: 15px;
+    font-weight:bold
+}
+.note {
+    font-size: 13px;
+    text-align:center;
+    display:block;
+   /* width: 100%*/
+}
+#darkenBackground{
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #000000;
+    z-index: 1;
+}
+
+#large {
+    display: none;
+    position: absolute;
+    background: #FFFFFF;
+    padding: 0px;
+    z-index: 10;
+    min-height: 0px;
+    min-width: 0px;
+    color: #336699;
 }
   .clear { clear: both; height: 0; overflow: hidden; }
 
