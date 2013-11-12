@@ -1,23 +1,23 @@
 $(document).ready(function () {
 
-
-
-
 //**Shows data clicked on summary card snippet level**//
 
 $('.currentSummaryData').on('click', summaryCardAction); 
-$('.clickData').on('click', findData);
+$('.clickData').on('click',showData);
 
-
-
-
-
-function findData(){
+function showData(){
   var id = $(this).data('details');
-  // $('.clickedSummaryData').hide();
   $('#'+id).show();
-  // summaryCardData();
 };
+
+// function hideData(){
+//     var data = $(this).data('details');
+//     $('#'+id).hide();
+// };
+
+// $('.closeInfoBox').on('click','.clickedSummaryData',(function(){
+//     $(this).parent().remove()
+//    });
  /****************************************
  Click on header to open and close the card view
  ****************************************/
@@ -41,16 +41,13 @@ $('.cardHeader').on('click', summaryCardAction);
 // }
 // });
 
-
 $(".summaryCard").hover(function(){
-        $(this).animate({"height": "336px"}, 5); 
-           
+        $(this).animate({"height": "336px"}, 5);           
 });
 
 $(".summaryCard").mouseleave(function(){
         $(this).animate({"height": "90px"}, 5);     
 });
-
 
 function summaryCardAction(){
 if($(".summaryCard").hasClass("fullSummaryView")) {
@@ -84,18 +81,27 @@ $('.note').on('click', function() {
     $('.ttip').hide(500);
     $("#darkenBackground").fadeOut("slow");
     $("#large").fadeOut("slow");
-
 });
+
 $("#large").click(function() {
     $(this).fadeOut();
    
 });
 
 $(".closeInfoBox").click(function() {
-    $(this).hide();
+    $(this).parent().hide();
    
 });
 
+// $('.closeInfoBox').on('click','.clickedSummaryData',(function(){
+//     $(this).parent().remove()
+//    });
+
+// $('.lowerContent').on('click','.closeInfoBox',function(){ 
+//     $(this).parent().fadeTo(300,0,function(){ 
+//           $(this).remove(); 
+//     }); 
+// });
 
 $("#togglebuttonGridPod").click(function(){
   $(".gridView, .podView").toggle("gridView podView");

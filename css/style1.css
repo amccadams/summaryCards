@@ -56,22 +56,11 @@ h3{
   float: right;
   margin-top: -45px;
 }
-
-.closeInfoBox .ui-icon{
+/*
+div.closeInfoBox{
   float: right;
   margin-top: -85px;
-}
-/*#tooltipBox{
-display:none;
-position: absolute;
-background: red;
-padding: 0px;
-z-index: 10;
-min-height: 0px;
-min-width: 0px;
-color: #336699;
 }*/
-
 
 .ttip {
     position: absolute;
