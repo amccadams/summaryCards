@@ -2,9 +2,6 @@ $(document).ready(function () {
 
 
 
-$("#togglebuttonGridPod").click(function(){
-  $(".gridView, .podView").toggleClass("gridView podView");
-});
 
 //**Shows data clicked on summary card snippet level**//
 
@@ -27,12 +24,12 @@ function findData(){
 $('.cardHeader').on('click', summaryCardAction);
 
 // Places card info 
-function summaryCardData(){
-  // SummaryCardAction();
-    $(".clickedSummaryData").css("position", "absolute");
-    $(".clickedSummaryData").css("margin-top", "-300px");
-    $(".clickedSummaryData").show(50);
-};
+// function summaryCardData(){
+//   // SummaryCardAction();
+//     $(".clickedSummaryData").css("position", "absolute");
+//     $(".clickedSummaryData").css("margin-top", "-200px");
+//     $(".clickedSummaryData").show(50);
+// };
 
 
 // // Hover for expanding card//  Good
@@ -62,15 +59,6 @@ if($(".summaryCard").hasClass("fullSummaryView")) {
         $(".summaryCard").animate({"height": "90px"}, 5).addClass("fullSummaryView");
 }
 };
-
-// $('.addNewIcon').click(function(){
-//   var $this =($(this);
-//      $("#tooltipBox").html(function(){
-//       $('.ttip').css({
-//          left: $this.position() + '20px',
-//             top: $this.position() + '50px'
-//       });
-//      });
 
 $('.addNewIcon').click(function() {
     var $this = $(this);
@@ -103,6 +91,15 @@ $("#large").click(function() {
    
 });
 
+$(".closeInfoBox").click(function() {
+    $(this).hide();
+   
+});
+
+
+$("#togglebuttonGridPod").click(function(){
+  $(".gridView, .podView").toggle("gridView podView");
+});
 
 
 

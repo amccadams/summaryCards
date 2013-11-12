@@ -1,10 +1,16 @@
 
+.pageContainer{
+  position: relative;
+}
+.lowerContent{
+position: absolute;
+margin-top: 200px;
+ z-index: -12;
+}
+
 #moveit1, #moveit2, #moveit3, #moveit4, #moveit5, #moveit6, #moveit7{
     overflow:hidden;  
 }
-
-
-
 
 .summaryCard{
     width:260px;
@@ -15,8 +21,8 @@
     margin-right:10px;
     margin-left: 10px;
     margin-top: 15px;
-    background-color: #add1ff
-}
+    background-color: #add1ff;
+   }
 div.summaryCard:hover{
   height:336px;
 }
@@ -28,9 +34,14 @@ div.summaryCard:hover{
    margin-left: 50px;
    padding-bottom: 15px;
    margin-bottom: 50px;
+   background-color: #add1ff;
+
 }
 .podView{
   display:none;
+}
+.summaryBox{
+background-color: #ffffff;
 }
  hr{
     border:none;
@@ -44,6 +55,11 @@ h3{
 .addNewIcon{
   float: right;
   margin-top: -45px;
+}
+
+.closeInfoBox .ui-icon{
+  float: right;
+  margin-top: -85px;
 }
 /*#tooltipBox{
 display:none;
@@ -107,6 +123,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F45000', end
     min-width: 0px;
     color: #336699;
 }
+
   .clear { clear: both; height: 0; overflow: hidden; }
 
 
@@ -114,9 +131,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F45000', end
   Left Right Scroll
 ****************************************/
 #collapseSummarySet{
+  position: absolute;
   /*display: inline-block;*/
 /*  height: 360px;*/
-  background-color: #ccc;
+  /*background-color: #ccc;*/
   padding-bottom: 20px;
   overflow-x:scroll;
   overflow-y:hidden; 
@@ -126,6 +144,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F45000', end
 #container{
     width:3000px;  
 }
+.clear { clear: both; height: 0; overflow: hidden; }
+
+
 
  /****************************************
   CSS 3 SEARCH FORM BY CAMERON BANEY

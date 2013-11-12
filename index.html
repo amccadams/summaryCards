@@ -19,6 +19,7 @@
   <h1>Account Name</h1>
   <div class ="clickme"><input type="button" value="Collapse Menu"></div>
   <hr>
+  <div class="pageContainer">
 <div id = "collapseSummarySet"> <!-- entire summary card set -->
 <div id="container">
 <div class="clickme summaryCard" id= "moveit1"><h3 class="cardHeader">Card 1</h3>
@@ -26,8 +27,8 @@
     <div id="large">
 <div class="ttip">
   <div class="contents">Add New Foo</div>
-  
-  <span class="note addNewIcon ui-icon  ui-icon-circle-minus">(click here to close the box)</span> 
+
+  <span class="note addNewIcon ui-icon  ui-icon-circle-minus">Click here to close the</span> 
 </div>
 </div>
 <div id="darkenBackground"></div><!-- <div id="tooltipCard1 tooltipBox">Hey</div> -->
@@ -98,30 +99,20 @@
 </div> <!-- Container -->
 
 </div> <!-- summarySet -->
-<hr>
-
-
-
-
-
+<!-- <hr> -->
 
 <!-- </div> --> <!--  CollapseMenu -->
-
-
-
-
-
+<div class = "lowerContent">
 <!-- Card 1 info starts here -->
-<div class ="clickedSummaryData" id="info-HiExample"><h1>Summary Info 1</h1>
-<h3>This foo is important.</h3><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div></div>
+
+<div class ="clickedSummaryData closeInfoBox " id="info-HiExample"><h1>Card 1</h1><span class="ui-icon  ui-icon-circle-close "></span>
+<h3>Info line 1.</h3></div>
 
 
-
-<div class ="clickedSummaryData" id="info-HelloExample">Summary Info 2<br><div class= " row full-width"> 
+<div class ="clickedSummaryData closeInfoBox" id="info-HelloExample"><h1>Summary Info 2</h1><span class="ui-icon  ui-icon-circle-close "></span>
+  <br><div class= " row full-width"> 
       <input type="button" id="togglebuttonGridPod" value="toggle grid and pod"/>
       <div class="gridView">
-
-
 <!-- <div class = "row content_hidden leadsSent"> -->
 <fieldset>
   <legend class= "handle">Fake Grid Content</legend>
@@ -187,20 +178,21 @@
        </div>
 </div>
 
-<div class ="clickedSummaryData" id="info-HowdyExample">Howdy-Data</div>
+<div class ="clickedSummaryData " id="info-HowdyExample">Data Example</div>
 
-<div class="clickedSummaryData" id="info-SummaryInfo1"><h1>Little Bunny Foo-foo</h1></div>
 
 <!-- Card 2  Info starts here -->
 
-<div class ="clickedSummaryData" id="info-Card2-optionA"><h1>Summary Info Card 2</h1>
-<h3>This foo is important.</h3><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div></div>
+<div class ="clickedSummaryData closeInfoBox" id="info-Card2-optionA"><h1>Summary Info Card 2</h1>
+<h3>This foo is important.</h3><span class="ui-icon  ui-icon-circle-close"></span><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div></div>
 
-<div class ="clickedSummaryData" id="info-Card2-optionB"><h1>Summary Info Card 2 OptionB</h1>
-<h3>This foo is important.</h3><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div></div>
+<div class ="clickedSummaryData closeInfoBox" id="info-Card2-optionB"><h1>Summary Info Card 2 OptionB</h1>
+<h3>This foo is important.</h3><span class="ui-icon  ui-icon-circle-close"></span><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div></div>
 
-<div class ="clickedSummaryData" id="info-Card2-optionC"><h1>Summary Info Card 2 OptionC</h1>
-<h3>This foo is important.</h3><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div></div>
+<div class ="clickedSummaryData closeInfoBox" id="info-Card2-optionC"><h1>Summary Info Card 2 OptionC</h1>
+<h3>This foo is important.</h3><span class="ui-icon  ui-icon-circle-close"></span><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div></div>
+</div> <!-- lowerContent -->
+</div><!-- pageContainer -->
 
 
 
