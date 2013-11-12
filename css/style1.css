@@ -6,6 +6,7 @@
 position: absolute;
 margin-top: 200px;
  z-index: -12;
+ /*width: 3000px;*/
 }
 
 #moveit1, #moveit2, #moveit3, #moveit4, #moveit5, #moveit6, #moveit7{
@@ -14,7 +15,7 @@ margin-top: 200px;
 
 .summaryCard{
     width:260px;
-    height:336px;
+    height:90px;
     border: 2px solid #000000;
     border-radius: 10px;
     float:left;
@@ -30,7 +31,7 @@ div.summaryCard:hover{
 .clickedSummaryData{ 
   display:none; 
    border: 2px solid #000000;
-   width: 75%;
+   width: 1000px;
    margin-left: 50px;
    padding-bottom: 15px;
    margin-bottom: 50px;
@@ -47,6 +48,7 @@ background-color: #ffffff;
     border:none;
     height: 5px;
     background-color: black;
+    width: 3000px;
 }
 h3{
   line-height: 1em;
@@ -113,8 +115,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F45000', end
     color: #336699;
 }
 
-  .clear { clear: both; height: 0; overflow: hidden; }
-
+  
 
  /****************************************
   Left Right Scroll
@@ -131,7 +132,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F45000', end
 }
 
 #container{
-    width:3000px;  
+    width: 3000px; 
 }
 .clear { clear: both; height: 0; overflow: hidden; }
 
@@ -245,6 +246,15 @@ input[type="submit"]:active {
   background: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(89,222,27)), color-stop(0.15, rgb(83,179,38)), color-stop(0.8, rgb(66,143,27)), color-stop(1, rgb(54,120,22)));
   background: -moz-linear-gradient( center bottom, rgb(89,222,27) 0%, rgb(83,179,38) 15%, rgb(66,143,27) 80%, rgb(54,120,22) 100%);
 }
+
+.sticky {  
+    position: fixed;  
+    width: 100%;  
+    left: 0;  
+    top: 0;  
+    z-index: 100;  
+    border-top: 0;  
+} 
 
 
 

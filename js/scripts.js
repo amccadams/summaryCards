@@ -1,8 +1,27 @@
 $(document).ready(function () {
 
+  var stickyNavTop = $('#container').offset().top;  
+  
+var stickyNav = function(){  
+var scrollTop = $(window).scrollTop();  
+       
+if (scrollTop > stickyNavTop) {   
+    $('#container').addClass('sticky');  
+} else {  
+    $('#container').removeClass('sticky');   
+}  
+};  
+  
+stickyNav();  
+  
+$(window).scroll(function() {  
+    stickyNav();  
+});  
+
+
 //**Shows data clicked on summary card snippet level**//
 
-$('.currentSummaryData').on('click', summaryCardAction); 
+$('.currentSummaryData').on('click', showData); 
 $('.clickData').on('click',showData);
 
 function showData(){
@@ -23,13 +42,6 @@ function showData(){
  ****************************************/
 $('.cardHeader').on('click', summaryCardAction);
 
-// Places card info 
-// function summaryCardData(){
-//   // SummaryCardAction();
-//     $(".clickedSummaryData").css("position", "absolute");
-//     $(".clickedSummaryData").css("margin-top", "-200px");
-//     $(".clickedSummaryData").show(50);
-// };
 
 
 // // Hover for expanding card//  Good
@@ -46,6 +58,7 @@ $(".summaryCard").hover(function(){
 });
 
 $(".summaryCard").mouseleave(function(){
+  // summaryCardAction();
         $(this).animate({"height": "90px"}, 5);     
 });
 
@@ -93,23 +106,9 @@ $(".closeInfoBox").click(function() {
    
 });
 
-// $('.closeInfoBox').on('click','.clickedSummaryData',(function(){
-//     $(this).parent().remove()
-//    });
-
-// $('.lowerContent').on('click','.closeInfoBox',function(){ 
-//     $(this).parent().fadeTo(300,0,function(){ 
-//           $(this).remove(); 
-//     }); 
-// });
-
 $("#togglebuttonGridPod").click(function(){
   $(".gridView, .podView").toggle("gridView podView");
 });
-
-
-
-
 
 // function summaryCardAction(){
 // if($(".summaryCard").hasClass("fullSummaryView")) {
@@ -129,8 +128,6 @@ $("#togglebuttonGridPod").click(function(){
   // .mouseleave(function(){
   //   $(this).remove("").css("background-color","red");
   // });
-
-
 
 
 //   //Card function
