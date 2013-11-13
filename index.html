@@ -17,7 +17,7 @@
 
 <body>
   <h1>Account Name</h1>
-  <div class ="clickme"><input type="button" value="Collapse Menu"></div>
+  <div class ="clickable"><input type="button" value="Open Cards"></div>
   <hr>
   <div class="pageContainer">
 <div id = "collapseSummarySet"> <!-- entire summary card set -->
@@ -26,7 +26,7 @@
   <span class="addNewIcon ui-icon  ui-icon-circle-plus"></span>
     <div id="large">
 <div class="ttip">
-  <div class="contents">Add New Foo</div>
+  <div class="contents">Put your magic foo here</div>
 
   <span class="note addNewIcon ui-icon  ui-icon-circle-minus">Click here to close the</span> 
 </div>
@@ -106,15 +106,15 @@
   <div class="clear"></div>
 
 
-<div class = "lowerContent">
+<div class = "lowerContent sortable">
 
 <!-- Card 1 info starts here -->
 
-<div class ="clickedSummaryData" id="info-HiExample"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div><h1>Card 1</h1>
+<div class ="clickedSummaryData" id="info-HiExample"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div><h1 class= "handle">Card 1</h1>
 <h3>Info line 1.</h3></div>
 
 
-<div class ="clickedSummaryData" id="info-HelloExample"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div><h1>Summary Info 2</h1>
+<div class ="clickedSummaryData" id="info-HelloExample"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div><h1 class= "handle">Summary Info 2</h1>
   <br><div class= " row full-width"> 
       <input type="button" id="togglebuttonGridPod" value="toggle grid and pod"/>
       <div class="gridView">
@@ -183,18 +183,18 @@
        </div>
 </div>
 
-<div class ="clickedSummaryData" id="info-HowdyExample"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div>Data Example</div>
+<div class ="clickedSummaryData" id="info-HowdyExample"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div> <h1 class="handle"> Data Example</h1></div>
 
 
 <!-- Card 2  Info starts here -->
 
-<div class ="clickedSummaryData" id="info-Card2-optionA"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div><h1>Summary Info Card 2 Option1</h1>
+<div class ="clickedSummaryData" id="info-Card2-optionA"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div><h1 class= "handle">Summary Info Card 2 Option1</h1>
 <h3>This foo is important.</h3><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div></div>
 
-<div class ="clickedSummaryData" id="info-Card2-optionB"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div><h1>Summary Info Card 2 Option2</h1>
+<div class ="clickedSummaryData" id="info-Card2-optionB"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div><h1 class= "handle" >Summary Info Card 2 Option2</h1>
 <h3>This foo is important.</h3><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div></div>
 
-<div class ="clickedSummaryData" id="info-Card2-optionC"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div><h1>Summary Info Card 2 Option3</h1>
+<div class ="clickedSummaryData" id="info-Card2-optionC"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div><h1 class= "handle">Summary Info Card 2 Option3</h1>
 <h3>This foo is important.</h3><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div></div>
 </div> <!-- lowerContent -->
 </div><!-- pageContainer -->
@@ -203,7 +203,6 @@
 
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="js/scripts.js"></script>
-
 
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>

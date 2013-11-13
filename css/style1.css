@@ -1,4 +1,9 @@
-
+body {
+ /* background-image:url('../img/background_texture.jpg');*/
+}
+.currentSummaryData:hover {
+  background-color:#C6DFFF;
+}
 .pageContainer{
   position: relative;
 }
@@ -16,7 +21,7 @@ margin-top: 200px;
 .summaryCard{
     width:260px;
     height:90px;
-    border: 2px solid #000000;
+  /*  border: 2px solid #000000;*/
     border-radius: 10px;
     float:left;
     margin-right:10px;
@@ -30,12 +35,25 @@ div.summaryCard:hover{
 
 .clickedSummaryData{ 
   display:none; 
-   border: 2px solid #000000;
+  /* border: 2px solid #000000;*/
+   /* border-radius: 10px;*/
    width: 1000px;
    margin-left: 50px;
    padding-bottom: 15px;
    margin-bottom: 50px;
-   background-color: #add1ff;
+/*   background-color: #add1ff;*/
+
+   -webkit-box-shadow: 0 1px 2px #303030;
+    -moz-box-shadow: 0 1px 2px #303030;
+    box-shadow: 0 1px 2px #303030;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    -o-border-radius: 8px 8px 8px 8px;
+    background-image:-moz-linear-gradient(top, #add1ff, #9CBCE5);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#add1ff), to(#9CBCE5));
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add1ff', endColorstr='#9CBCE5', GradientType=0);
+    background-color:#add1ff;
 
 }
 .podView{
@@ -124,15 +142,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F45000', end
   position: absolute;
   /*display: inline-block;*/
 /*  height: 360px;*/
-  /*background-color: #ccc;*/
+ 
   padding-bottom: 20px;
   overflow-x:scroll;
   overflow-y:hidden; 
+   background-color: rgba(215,218,219, 0.6);
 
 }
 
 #container{
     width: 3000px; 
+   background-color: rgba(215,218,219, 0.6);
 }
 .clear { clear: both; height: 0; overflow: hidden; }
 

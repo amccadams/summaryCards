@@ -1,28 +1,23 @@
 $(document).ready(function () {
 
-  var stickyNavTop = $('#container').offset().top;  
-  
-var stickyNav = function(){  
-var scrollTop = $(window).scrollTop();  
-       
-if (scrollTop > stickyNavTop) {   
-    $('#container').addClass('sticky');  
-} else {  
-    $('#container').removeClass('sticky');   
-}  
-};  
-  
-stickyNav();  
-  
-$(window).scroll(function() {  
-    stickyNav();  
-});  
-
-
+//   $(".clickable").click(function(){
+// $("#collapseSummarySet").toggle();
+// });
 //**Shows data clicked on summary card snippet level**//
 
 $('.currentSummaryData').on('click', showData); 
 $('.clickData').on('click',showData);
+
+// $('.clickable').on('click', summaryCardAction);
+$('.clickable').on('click', function(){
+  if($(this).text()=="Open Cards"){
+    $(this).text("Collapse Cards");
+  }else{
+    $(this).text("Open Cards");
+  }
+$(summaryCardAction).toggle();
+return false;
+});
 
 function showData(){
   var id = $(this).data('details');
@@ -42,26 +37,42 @@ function showData(){
  ****************************************/
 $('.cardHeader').on('click', summaryCardAction);
 
-
-
-// // Hover for expanding card//  Good
-// $(".summaryCard").mouseenter(function(){
-//   if($(this).hasClass("fullSummaryView")) {
-//         $(this).animate({"height": "90px"}, 5).removeClass("fullSummaryView "); 
-//       } else {         
-//         $(this).animate({"height": "336px"}, 5).addClass("fullSummaryView");
-// }
-// });
-
 $(".summaryCard").hover(function(){
-        $(this).animate({"height": "336px"}, 5);           
+        $(this).animate({"height": "330px"}, 5);           
 });
 
 $(".summaryCard").mouseleave(function(){
   // summaryCardAction();
-        $(this).animate({"height": "90px"}, 5);     
+        $(".summaryCard").animate({"height": "90px"}, 5);     
 });
+// $(".summaryCard").mouseleave(function(){
+//  setTimeout(function(){
+//   $(".summaryCard").animate({"height": "90px"}, 5);
+//  })
+//         // $(".summaryCard").animate({"height": "90px"}, 5);     
+// });
 
+// $('.summaryCard').mouseleave(function() {
+//     clearTimeout($(this).data('timeout'));
+//     $(".summaryCard").animate({"height": "90px"}, 5); 
+// }, function() {
+//     var t = setTimeout(function() {
+//         $('summaryCard').animate({"height": "90px"}, 2000);
+//     }, 1000);
+//     $(this).data('timeout', t);
+// });
+
+
+// $('.summaryCard').mouseleave(function () {
+//     clearTimeout(this.timer);
+// }, function () {
+//     this.timer = setTimeout(function () {
+//         $('.summaryCard').animate({"height": "90px"},5);
+   
+//     }, 3000);
+// });
+
+//change the above 'summaryCard' to 'this' and only the one element will close
 function summaryCardAction(){
 if($(".summaryCard").hasClass("fullSummaryView")) {
         $(".summaryCard").animate({"height": "330px"}, 5).removeClass("fullSummaryView "); 
@@ -76,18 +87,10 @@ $('.addNewIcon').click(function() {
         "opacity": "0.3"
     }).fadeIn("slow");
 
-
     $("#large").html(function() {
         $('.ttip')
-        // .css({
-        //     left: $this.position() + '10px',
-        //     top: $this.position() + '200px'
-        // })
         .show(500)
-
     }).fadeIn("slow");
-
-
 });
 
 $('.note').on('click', function() {
@@ -102,8 +105,7 @@ $("#large").click(function() {
 });
 
 $(".closeInfoBox").click(function() {
-    $(this).parent().hide();
-   
+    $(this).parent().hide();  
 });
 
 $("#togglebuttonGridPod").click(function(){
@@ -199,29 +201,54 @@ $("#togglebuttonGridPod").click(function(){
  
  // $("div#collapseSummarySet").scrollLeft( 300 );
 
+///////////////////////////////////////////////////////////////////// 
 
+
+////script to allow stacking order of content divs to be changed///// 
+  
+
+  $( ".sortable" ).sortable({ handle: ".handle", cursor: "move" });
+
+
+/////////////////////////////////////////////////////////////////////
 
 ////script to allow the dataTable columns to be reordered//////
 
-// var oTable = $('.example').dataTable( {
-//     "sDom": 'Rlfrtip',
-//     "oColReorder": {
-//       "aiOrder": [ 4, 3, 2, 1, 0 ]
-//     }
-//   } );
+var oTable = $('.example').dataTable( {
+    "sDom": 'Rlfrtip',
+    "oColReorder": {
+      "aiOrder": [ 4, 3, 2, 1, 0 ]
+    }
+  } );
   
-//   $('#reset').click( function () {
-//     ColReorder.fnReset( oTable );
-//     return false;
-//   } );
-
-//  var totalwidth = 0;
-// $('.summaryCard').each(function(){
-//    totalwidth = totalwidth + $(this).outerWidth();
-// });
-// $('#container').width(totalwidth);
+  $('#reset').click( function () {
+    ColReorder.fnReset( oTable );
+    return false;
+  } );
 
 ///////////////////////////////////////////////////////////////////// 
+
+
+var stickyNavTop = $('#container').offset().top;  
+  
+var stickyNav = function(){  
+var scrollTop = $(window).scrollTop();  
+       
+if (scrollTop > stickyNavTop) {   
+    $('#container').addClass('sticky');  
+} else {  
+    $('#container').removeClass('sticky');   
+}  
+};  
+  
+stickyNav();  
+  
+$(window).scroll(function() {  
+    stickyNav();  
+});  
+
+
+
 
 });
 
