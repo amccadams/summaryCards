@@ -56,6 +56,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add1ff', end
     background-color:#add1ff;
 
 }
+
+.clickedSummaryDataAjax{ 
+/*  display:none; */
+  /* border: 2px solid #000000;*/
+   /* border-radius: 10px;*/
+   width: 1000px;
+   margin-left: 50px;
+   padding-bottom: 15px;
+   margin-bottom: 50px;
+/*   background-color: #add1ff;*/
+
+   -webkit-box-shadow: 0 1px 2px #303030;
+    -moz-box-shadow: 0 1px 2px #303030;
+    box-shadow: 0 1px 2px #303030;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    -o-border-radius: 8px 8px 8px 8px;
+    background-image:-moz-linear-gradient(top, #add1ff, #9CBCE5);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#add1ff), to(#9CBCE5));
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add1ff', endColorstr='#9CBCE5', GradientType=0);
+    background-color:#add1ff;
+
+}
 .podView{
   display:none;
 }
