@@ -18,30 +18,32 @@
 </head>
 
 <body>
-    <h1>Account Name</h1>
-  <div class ="clickable"><input type="button" value="Open Cards"></div>
-  <hr>
+    <!-- <h1>Account Name</h1> -->
+  <!-- <div class ="clickable"><input type="button" value="Open Cards"></div>
+  <hr> -->
     <!--  <div id="addcontent">
     <a href="summaryCard1.html">load other data</a>
     <div id="inserthere"></div>
   </div> -->
 
     <div class="pageContainer">
-<div id = "collapseSummarySet"> <!-- entire summary card set -->
-<div id="container">
+<div id = "collapseSummarySet" > <!-- entire summary card set -->
+<div id="container" class="sortable">
 
 
 
-<div class="clickme summaryCard" id= "card1"><h3 class="cardHeader">Card 1</h3>
+<div class="clickme summaryCard card1" id= "card1a"><h3 class="cardHeader">Personal Settings</h3>
   <span class="addNewIcon ui-icon  ui-icon-circle-plus"></span>
     <div id="large">
 <div class="ttip">
-  <div class="contents">Put your magic foo here</div>
+  <div class="contents">Add Cards</div>
+   <span class="note addNewIcon ui-icon  ui-icon-circle-minus">Click here to close the</span> 
 
-  <span class="note addNewIcon ui-icon  ui-icon-circle-minus">Click here to close the</span> 
+
+ 
 </div>
 </div>
-<div id="darkenBackground"></div><!-- <div id="tooltipCard1 tooltipBox">Hey</div> -->
+<!-- <div id="darkenBackground"></div> --><!-- <div id="tooltipCard1 tooltipBox">Hey</div> -->
   
 
  <form id="search-form">
@@ -51,16 +53,25 @@
     <div id="addcontent" ><a href="summaryCard1.html">Summary Info 1</a>
   <!--     <div id="inserthere"></div> -->
     </div>
+    <div class="personalizeCardSelection"></div>
 
     <div class="currentSummaryData clickData"data-details="info-HelloExample">Summary Info 2</div>
 
     <div class="currentSummaryData clickData" data-details="info-HowdyExample">Summary Info 3</div>
+                         <!--  <input name="checkbox_name" id="checkbox_id" type="checkbox" value=""><span>Notes</span></label></div><br> -->
+
+ 
+ <input name="checkbox_name" id="card2" type="checkbox" ><span>Card 2</span>
+ <input name="checkbox_name" id="card3" type="checkbox" ><span>Card 3</span>
+ <input name="checkbox_name" id="card4" type="checkbox" ><span>Card 4</span>
+ <input name="checkbox_name" id="card5" type="checkbox" ><span>Card 5</span>
+ <input name="checkbox_name" id="card6" type="checkbox" ><span>Card 6</span>
+ <input name="checkbox_name" id="card7" type="checkbox" ><span>Card 7</span>
+ <input name="checkbox_name" id="card8" type="checkbox" ><span>Card 8</span>
 
 </div>
 
-
-
-<div class="clickme summaryCard" id = "card2"><h3 class="cardHeader">Card 2</h3>
+<div class="clickme summaryCard content_hidden content_option_card2 card2 " id="card2a"><h3 class="cardHeader handle">Card 2</h3><div class="closeCard"><span class="ui-icon  ui-icon-circle-close"></span></div>
  <form id="search-form">
   <input type="text" />
   <input type="submit" value="Search" />
@@ -68,41 +79,46 @@
   <div class="currentSummaryData clickData" data-details="info-Card2-optionA">Summary Info 1</div>
     <div class="currentSummaryData clickData"data-details="info-Card2-optionB">Summary Info 2</div>
     <div class="currentSummaryData clickData" data-details="info-Card2-optionC">Summary Info 3</div>
+
 </div>
 
-<div class="clickme summaryCard" id = "card3"><h3 class="cardHeader">Card 3</h3> <form id="search-form">
+<div class="clickme summaryCard content_hidden content_option_card3 card3 " id="card3a"><h3 class="cardHeader handle">Card 3</h3><div class="closeCard"><span class="ui-icon  ui-icon-circle-close"></span></div>
+  <form id="search-form">
   <input type="text" />
   <input type="submit" value="Search" />
-</form>
-    
-  
+</form>  
 </div>
-<div class="clickme summaryCard" id = "card4"><h3 class="cardHeader">Card 4</h3> <form id="search-form">
+
+
+<div class="clickme summaryCard content_hidden content_option_card4 card4" id="card4a"><h3 class="cardHeader handle">Card 4</h3><div class="closeCard"><span class="ui-icon  ui-icon-circle-close"></span></div> <form id="search-form">
   <input type="text" />
   <input type="submit" value="Search" />
-</form>
-    
-  
+</form>  
 </div>
-<div class="clickme summaryCard" id = "card5"><h3 class="cardHeader">Card 5</h3> <form id="search-form">
-  <input type="text" />
-  <input type="submit" value="Search" />
-</form>
-     
-</div>
-<div class="clickme summaryCard" id = "card6"><h3 class="cardHeader">Card 6</h3> <form id="search-form">
-  <input type="text" />
-  <input type="submit" value="Search" />
-</form>
-     
-</div>
-<div class="clickme summaryCard" id = "card7"><h3 class="cardHeader">Card 7</h3> <form id="search-form">
+
+<div class="clickme summaryCard content_hidden content_option_card5 card5" id="card5a"><h3 class="cardHeader handle">Card 5</h3><div class="closeCard"><span class="ui-icon  ui-icon-circle-close"></span></div>
+  <form id="search-form">
   <input type="text" />
   <input type="submit" value="Search" />
 </form>    
 </div>
 
-<div class="clickme summaryCard" id = "card8"><h3 class="cardHeader">Card 8</h3> <form id="search-form">
+<div class="clickme summaryCard content_hidden content_option_card6 card6" id="card6a"><h3 class="cardHeader handle">Card 6</h3><div class="closeCard"><span class="ui-icon  ui-icon-circle-close"></span></div>
+  <form id="search-form">
+  <input type="text" />
+  <input type="submit" value="Search" />
+</form>     
+</div>
+
+<div class="clickme summaryCard content_hidden content_option_card7 card7" id="card7a"><h3 class="cardHeader handle">Card 7</h3><div class="closeCard"><span class="ui-icon  ui-icon-circle-close"></span></div>
+  <form id="search-form">
+  <input type="text" />
+  <input type="submit" value="Search" />
+</form>    
+</div>
+
+<div class="clickme summaryCard content_hidden content_option_card8 card8" id="card8a"><h3 class="cardHeader handle">Card 8</h3><div class="closeCard"><span class=" ui-icon  ui-icon-circle-close"></span></div>
+  <form id="search-form">
   <input type="text" />
   <input type="submit" value="Search" />
 </form>    
@@ -127,7 +143,7 @@
 </div> -->
 <div id="inserthere"></div>
 
-<div class ="clickedSummaryData" id="info-HelloExample"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div><h1 class= "handle">Summary Info 2</h1>
+<div class ="clickedSummaryData card1" id="info-HelloExample"><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div><h1 class= "handle">Summary Info 2</h1>
   <br><div class= " row full-width"> 
       <input type="button" id="togglebuttonGridPod" value="toggle grid and pod"/>
       <div class="gridView">
@@ -196,18 +212,18 @@
        </div>
 </div>
 
-<div class ="clickedSummaryData" id="info-HowdyExample"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div> <h1 class="handle"> Data Example</h1></div>
+<div class ="clickedSummaryData card1" id="info-HowdyExample"><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div> <h1 class="handle"> Data Example</h1></div>
 
 
 <!-- Card 2  Info starts here -->
 
-<div class ="clickedSummaryData" id="info-Card2-optionA"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div><h1 class= "handle">Summary Info Card 2 Option1</h1>
+<div class ="clickedSummaryData card2" id="info-Card2-optionA"><div class="closeInfoBox"><span class="icon1 ui-icon  ui-icon-circle-close"></span></div><h1 class= "handle">Summary Info Card 2 Option1</h1>
 <h3>This foo is important.</h3><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div></div>
 
-<div class ="clickedSummaryData" id="info-Card2-optionB"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div><h1 class= "handle" >Summary Info Card 2 Option2</h1>
+<div class ="clickedSummaryData card2" id="info-Card2-optionB"><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div><h1 class= "handle" >Summary Info Card 2 Option2</h1>
 <h3>This foo is important.</h3><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div></div>
 
-<div class ="clickedSummaryData" id="info-Card2-optionC"><div class="closeInfoBox"><span class="ui-icon  ui-icon-circle-close"></span></div><h1 class= "handle">Summary Info Card 2 Option3</h1>
+<div class ="clickedSummaryData card2" id="info-Card2-optionC"><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div><h1 class= "handle">Summary Info Card 2 Option3</h1>
 <h3>This foo is important.</h3><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div></div>
 </div> <!-- lowerContent -->
 </div><!-- pageContainer -->

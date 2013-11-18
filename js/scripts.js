@@ -108,6 +108,8 @@ $(".closeInfoBox").click(function() {
     $(this).parent().hide();  
 });
 
+
+
 $("#togglebuttonGridPod").click(function(){
   $(".gridView, .podView").toggle("gridView podView");
 });
@@ -200,6 +202,28 @@ $("#togglebuttonGridPod").click(function(){
 //    }); 
  
  // $("div#collapseSummarySet").scrollLeft( 300 );
+
+////script to add more cards from personal settings///// 
+
+$(':checkbox').change(function () {
+    var option = 'content_option_' + $(this).attr('id');
+    if ($('.' + option).css('display') == 'none') {
+        $('.' + option).show();
+    } else {
+        $('.' + option).hide();
+    }
+});
+
+
+////script to close cards from personal settings///// 
+
+$(".closeCard").click(function () {
+    $(this).parent().hide();
+    var id = $.trim($(this).parent().prop('class').match(/ (card.)+?/g)[0]);
+    $('#' + id).prop("checked", false);
+});
+
+
 
 ///////////////////////////////////////////////////////////////////// 
 

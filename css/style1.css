@@ -14,7 +14,7 @@ margin-top: 200px;
  /*width: 3000px;*/
 }
 
-#moveit1, #moveit2, #moveit3, #moveit4, #moveit5, #moveit6, #moveit7{
+#card1a, #card2a, #card3a, #card4a, #card5a, #card6a, #card7a, #card8a{
     overflow:hidden;  
 }
 
@@ -27,7 +27,31 @@ margin-top: 200px;
     margin-right:10px;
     margin-left: 10px;
     margin-top: 15px;
-    background-color: #add1ff;
+   /* background-color: #add1ff;*/
+   }
+   .card1{
+    background-color: #0283A6;
+   }
+    .card2{
+    background-color: #1CA995;
+   }
+    .card3{
+    background-color: #F2C438;
+   }
+    .card4{
+    background-color: #F1A81F;
+   }
+    .card5{
+    background-color: #D75B2B;
+   }
+    .card6{
+    background-color: #933C60;
+   }
+    .card7{
+    background-color: #F66065;
+   }
+    .card8{
+    background-color: #90C77D;
    }
 div.summaryCard:hover{
   height:336px;
@@ -41,8 +65,6 @@ div.summaryCard:hover{
    margin-left: 50px;
    padding-bottom: 15px;
    margin-bottom: 50px;
-/*   background-color: #add1ff;*/
-
    -webkit-box-shadow: 0 1px 2px #303030;
     -moz-box-shadow: 0 1px 2px #303030;
     box-shadow: 0 1px 2px #303030;
@@ -50,23 +72,16 @@ div.summaryCard:hover{
     -moz-border-radius: 8px 8px 8px 8px;
     -webkit-border-radius: 8px 8px 8px 8px;
     -o-border-radius: 8px 8px 8px 8px;
-    background-image:-moz-linear-gradient(top, #add1ff, #9CBCE5);
+    /*background-image:-moz-linear-gradient(top, #add1ff, #9CBCE5);
     background-image: -webkit-gradient(linear, left top, left bottom, from(#add1ff), to(#9CBCE5));
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add1ff', endColorstr='#9CBCE5', GradientType=0);
-    background-color:#add1ff;
-
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add1ff', endColorstr='#9CBCE5', GradientType=0);*/
+   /* background-color:#add1ff;*/
 }
-
 .clickedSummaryDataAjax{ 
-/*  display:none; */
-  /* border: 2px solid #000000;*/
-   /* border-radius: 10px;*/
    width: 1000px;
    margin-left: 50px;
    padding-bottom: 15px;
    margin-bottom: 50px;
-/*   background-color: #add1ff;*/
-
    -webkit-box-shadow: 0 1px 2px #303030;
     -moz-box-shadow: 0 1px 2px #303030;
     box-shadow: 0 1px 2px #303030;
@@ -76,11 +91,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add1ff', end
     -o-border-radius: 8px 8px 8px 8px;
     background-image:-moz-linear-gradient(top, #add1ff, #9CBCE5);
     background-image: -webkit-gradient(linear, left top, left bottom, from(#add1ff), to(#9CBCE5));
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add1ff', endColorstr='#9CBCE5', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add1ff', endColorstr='#9CBCE5', GradientType=0);
     background-color:#add1ff;
-
 }
-.podView{
+
+.podView, .content_hidden{
   display:none;
 }
 .summaryBox{
@@ -96,22 +111,22 @@ h3{
   line-height: 1em;
 }
 
-.addNewIcon{
+.addNewIcon, .ui-icon{
   float: right;
   margin-top: -45px;
 }
-/*
-div.closeInfoBox{
-  float: right;
-  margin-top: -85px;
-}*/
+.icon1{
+  margin-top: 2px;
+float: right;
+}
 
 .ttip {
     position: absolute;
-    width: 350px;
-    height: 100px;
+    width: 100px;
+    /*height: 100px;*/
     color: #fff;
     padding: 20px;
+    margin-left: 100px;
     -webkit-box-shadow: 0 1px 2px #303030;
     -moz-box-shadow: 0 1px 2px #303030;
     box-shadow: 0 1px 2px #303030;
@@ -157,30 +172,31 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F45000', end
     color: #336699;
 }
 
-  
+div ul.cardCheckbox li{
+text-decoration: none;
+}
 
  /****************************************
   Left Right Scroll
 ****************************************/
 #collapseSummarySet{
   position: absolute;
-  /*display: inline-block;*/
-/*  height: 360px;*/
- 
   padding-bottom: 20px;
   overflow-x:scroll;
   overflow-y:hidden; 
-   background-color: rgba(215,218,219, 0.6);
-
+  background-color: rgba(215,218,219, 0.6);
 }
 
 #container{
     width: 3000px; 
    background-color: rgba(215,218,219, 0.6);
 }
-.clear { clear: both; height: 0; overflow: hidden; }
 
-
+.clear { 
+  clear: both; 
+  height: 0; 
+  overflow: hidden; 
+}
 
  /****************************************
   CSS 3 SEARCH FORM BY CAMERON BANEY
@@ -290,6 +306,7 @@ input[type="submit"]:active {
   background: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(89,222,27)), color-stop(0.15, rgb(83,179,38)), color-stop(0.8, rgb(66,143,27)), color-stop(1, rgb(54,120,22)));
   background: -moz-linear-gradient( center bottom, rgb(89,222,27) 0%, rgb(83,179,38) 15%, rgb(66,143,27) 80%, rgb(54,120,22) 100%);
 }
+
 
 .sticky {  
     position: fixed;  
