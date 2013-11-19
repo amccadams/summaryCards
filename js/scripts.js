@@ -215,7 +215,7 @@ $(':checkbox').change(function () {
 });
 
 
-////script to close cards from personal settings///// 
+////script to close cards from personal settings and uncheck box///// 
 
 $(".closeCard").click(function () {
     $(this).parent().hide();
@@ -270,6 +270,12 @@ stickyNav();
 $(window).scroll(function() {  
     stickyNav();  
 });  
+
+/////Simple Expand//////////////////////////////////////////////////////////// 
+
+$('.expander').simpleexpand();
+
+///////////////////////////////////////////////////////////////////// 
 
 
 

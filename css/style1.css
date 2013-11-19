@@ -61,10 +61,10 @@ div.summaryCard:hover{
   display:none; 
   /* border: 2px solid #000000;*/
    /* border-radius: 10px;*/
-   width: 1000px;
+   width: 1200px;
    margin-left: 50px;
    padding-bottom: 15px;
-   margin-bottom: 50px;
+  /* margin-bottom: 50px;*/
    -webkit-box-shadow: 0 1px 2px #303030;
     -moz-box-shadow: 0 1px 2px #303030;
     box-shadow: 0 1px 2px #303030;
@@ -76,6 +76,17 @@ div.summaryCard:hover{
     background-image: -webkit-gradient(linear, left top, left bottom, from(#add1ff), to(#9CBCE5));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add1ff', endColorstr='#9CBCE5', GradientType=0);*/
    /* background-color:#add1ff;*/
+}
+
+.personalizeCardSelection{
+/*display:block;*/
+margin-left: 15px;
+}
+.secondLevelInfo{
+  margin-top:30px;
+}
+.thirdLevelInfo{
+  margin-top: -10px;
 }
 .clickedSummaryDataAjax{ 
    width: 1000px;
@@ -316,6 +327,23 @@ input[type="submit"]:active {
     z-index: 100;  
     border-top: 0;  
 } 
+
+
+/*Collapse/Expand icon 3rd level info*/
+
+#container.expanded .expander {
+    padding-left: 13px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-image: url(../img/expanded.gif);
+}
+
+#container.collapsed .expander {
+    padding-left: 13px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-image: url(../img/collapsed.gif);
+}
 
 
 
