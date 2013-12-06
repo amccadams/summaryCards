@@ -1,5 +1,7 @@
-body {
+ body {
  /* background-image:url('../img/background_texture.jpg');*/
+ font-family: 'Open Sans', sans-serif;
+ background-color: #f5f5f5;
 }
 .currentSummaryData:hover {
   background-color:#C6DFFF;
@@ -14,97 +16,131 @@ margin-top: 200px;
  /*width: 3000px;*/
 }
 
-#card1a, #card2a, #card3a, #card4a, #card5a, #card6a, #card7a, #card8a{
+#personalCarda, #contactCarda, #accountCarda, #meetingCarda, #bookingCarda, #tracesNotesCarda, #servicesCarda, #mediaCarda{
     overflow:hidden;  
+}
+
+.clickedSummaryData h1{
+  color: white;
+  font-weight: 400;
 }
 
 .summaryCard{
     width:260px;
     height:90px;
-  /*  border: 2px solid #000000;*/
-    border-radius: 10px;
+    border: 2px solid #b0b0b0;
+   /* border-radius: 10px;*/
     float:left;
     margin-right:10px;
     margin-left: 10px;
     margin-top: 15px;
+
    /* background-color: #add1ff;*/
    }
-   .card1{
+   .summaryCard h3{
+    color:white;
+    font-weight:300;
+   }
+  .checkboxHeaders, .cardInfoChoice{
+    font-size: 1.25em;
+    color: white;
+    margin-left: 15px;
+
+   }
+   .personalCard{
     background-color: #0283A6;
    }
-    .card2{
+    .contactCard{
     background-color: #1CA995;
    }
-    .card3{
+    .accountCard{
     background-color: #F2C438;
    }
-    .card4{
+    .meetingCard{
     background-color: #F1A81F;
    }
-    .card5{
+    .bookingCard{
     background-color: #D75B2B;
    }
-    .card6{
+    .tracesNotesCard{
     background-color: #933C60;
    }
-    .card7{
+    .servicesCard{
     background-color: #F66065;
    }
-    .card8{
+    .mediaCard{
     background-color: #90C77D;
    }
+.summaryIcon{
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -5px;
+  width:80px;
+  height: 80px;
+}
+
+.lowerheaderbarIcon{
+    width:60px;
+  height: 60px;
+ /* float: right;
+*/
+}
+
 div.summaryCard:hover{
   height:336px;
 }
 
 .clickedSummaryData{ 
   display:none; 
-  /* border: 2px solid #000000;*/
-   /* border-radius: 10px;*/
    width: 1200px;
    margin-left: 50px;
    padding-bottom: 15px;
   /* margin-bottom: 50px;*/
    -webkit-box-shadow: 0 1px 2px #303030;
     -moz-box-shadow: 0 1px 2px #303030;
-    box-shadow: 0 1px 2px #303030;
-    border-radius: 8px 8px 8px 8px;
-    -moz-border-radius: 8px 8px 8px 8px;
-    -webkit-border-radius: 8px 8px 8px 8px;
-    -o-border-radius: 8px 8px 8px 8px;
-    /*background-image:-moz-linear-gradient(top, #add1ff, #9CBCE5);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#add1ff), to(#9CBCE5));
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add1ff', endColorstr='#9CBCE5', GradientType=0);*/
-   /* background-color:#add1ff;*/
+    box-shadow: 0 1px 2px #303030; 
 }
 
 .personalizeCardSelection{
-/*display:block;*/
 margin-left: 15px;
 }
 .secondLevelInfo{
   margin-top:30px;
 }
+.contactsHandle{
+  background-color: #178A79;
+}
+.accountsHandle{
+  background-color:#D1AA30; 
+}
+.meetingsHandle{
+  background-color: #CC8E1B;
+}
+.bookingsHandle{
+  background-color: #B04B23;
+}
+.tracesNotesHandle{
+  background-color: #8F3A5D;
+}
+.servicesHandle{
+  background-color: #c94f53;
+}
+.mediaHandle{
+  background-color: #719c62;
+}
+
 .thirdLevelInfo{
   margin-top: -10px;
 }
-.clickedSummaryDataAjax{ 
-   width: 1000px;
-   margin-left: 50px;
-   padding-bottom: 15px;
-   margin-bottom: 50px;
-   -webkit-box-shadow: 0 1px 2px #303030;
-    -moz-box-shadow: 0 1px 2px #303030;
-    box-shadow: 0 1px 2px #303030;
-    border-radius: 8px 8px 8px 8px;
-    -moz-border-radius: 8px 8px 8px 8px;
-    -webkit-border-radius: 8px 8px 8px 8px;
-    -o-border-radius: 8px 8px 8px 8px;
-    background-image:-moz-linear-gradient(top, #add1ff, #9CBCE5);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#add1ff), to(#9CBCE5));
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add1ff', endColorstr='#9CBCE5', GradientType=0);
-    background-color:#add1ff;
+h1.bookingsHandle, h1.contactCard, h1.accountCard, h1.meetingsHandle, h1.tracesNotesHandle, h1.servicesHandle, h1.mediaHandle{
+   font-weight: 200;
+   font-size: 2em;
 }
+h4.bookingCard{
+  color: white;
+  font-weight: 100;
+}
+
 
 .podView, .content_hidden{
   display:none;
@@ -129,6 +165,9 @@ h3{
 .icon1{
   margin-top: 2px;
 float: right;
+width: 30px;
+height: 30px;
+
 }
 
 .ttip {
@@ -224,9 +263,9 @@ text-decoration: none;
   background: -moz-linear-gradient( center top, rgb(243,243,243) 0%, rgb(225,225,225) 100%);*/
   
   /* Rounded Corners */
-  border-radius: 17px; 
+  /*border-radius: 17px; 
   -webkit-border-radius: 17px;
-  -moz-border-radius: 17px;
+  -moz-border-radius: 17px;*/
   
   /* Shadows */
  /* box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3); 
@@ -252,9 +291,9 @@ input[type="text"]{
   float: left;
   
   /* Rounded Corners */
-  border-radius: 17px; 
+  /*border-radius: 17px; 
   -webkit-border-radius: 17px;
-  -moz-border-radius: 17px;
+  -moz-border-radius: 17px;*/
   
   /* Shadows */
   box-shadow: -1px -1px 2px rgba(0,0,0,.3), 0 0 1px rgba(0,0,0,.2);
@@ -293,9 +332,9 @@ input[type="submit"]{
   outline: none;
   
   /* Rounded Corners */
-  border-radius: 30px; 
+/*  border-radius: 30px; 
   -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
+  -moz-border-radius: 30px;*/
   
   /* Shadows */
   box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.4);
@@ -345,6 +384,20 @@ input[type="submit"]:active {
     background-image: url(../img/collapsed.gif);
 }
 
-
-
-
+.clickedSummaryDataAjax{ 
+   width: 1000px;
+   margin-left: 50px;
+   padding-bottom: 15px;
+   margin-bottom: 50px;
+   -webkit-box-shadow: 0 1px 2px #303030;
+    -moz-box-shadow: 0 1px 2px #303030;
+    box-shadow: 0 1px 2px #303030;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    -o-border-radius: 8px 8px 8px 8px;
+    background-image:-moz-linear-gradient(top, #add1ff, #9CBCE5);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#add1ff), to(#9CBCE5));
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add1ff', endColorstr='#9CBCE5', GradientType=0);
+    background-color:#add1ff;
+}

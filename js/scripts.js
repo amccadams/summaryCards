@@ -110,7 +110,7 @@ $(".closeInfoBox").click(function() {
 
 
 
-$("#togglebuttonGridPod").click(function(){
+$(".togglebuttonGridPod").click(function(){
   $(".gridView, .podView").toggle("gridView podView");
 });
 

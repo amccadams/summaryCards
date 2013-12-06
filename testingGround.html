@@ -3,114 +3,366 @@
 <head>
 <meta charset="UTF-8">
 <title>First</title>
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-
 <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet"type="text/css">
 <link href="css/foundation.css" rel="stylesheet" type="text/css">
-<!-- <link rel="stylesheet" type="text/css" href="ui.css" /> -->
 <link href="css/summaryCardSlide.css" rel="stylesheet" type="text/css">
 <link href="css/style1.css" rel="stylesheet" type="text/css">
-<!-- <link rel="stylesheet" href="css/mystyle.css" /> -->
-<!-- <link href="css/icons/general_enclosed_foundicons.css" rel="stylesheet">
-<link href="css/responsive-tables.css" rel="stylesheet"> -->
+<link href="css/responsive-tables.css" rel="stylesheet"> 
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,300,600' rel='stylesheet' type='text/css'>
 
 <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" /> -->
 </head>
 
 <body>
+  <div class="pageContainer">
+    <div id = "collapseSummarySet" > <!-- entire summary card set -->
+      <div id="container" class="sortable">
+        <div class="clickme summaryCard personalCard" id= "personalCarda">
+          <h3 class="cardHeader">Personal Settings <img class="summaryIcon"src="img/FingerPrint-128.png"></h3>
+          <span class="addNewIcon ui-icon  ui-icon-circle-plus"></span>
+          <div id="large">
+            <div class="ttip">
+              <div class="contents">Add Cards</div>
+              <span class="note addNewIcon ui-icon  ui-icon-circle-minus">Click here to close the</span> 
+            </div>
+          </div>
+          <form id="search-form">
+            <input type="text"/>
+            <input type="submit" value="Search" />
+         </form>
+         <!-- <div id="addcontent" >
+           <a href="summarypersonalCard.html">Summary Info 1</a>
+         </div> -->
+         <div class="personalizeCardSelection">     
+           <input name="checkbox_name" id="accountCard" type="checkbox"><span class="checkboxHeaders"> Accounts</span><br>
+           <input name="checkbox_name" id="contactCard" type="checkbox"><span class="checkboxHeaders"> Contacts</span><br>
+           <input name="checkbox_name" id="meetingCard" type="checkbox"><span class="checkboxHeaders"> Meetings</span><br>
+           <input name="checkbox_name" id="bookingCard" type="checkbox"><span class="checkboxHeaders"> Bookings</span><br>
+           <input name="checkbox_name" id="tracesNotesCard" type="checkbox"><span class="checkboxHeaders"> Traces/Notes</span><br>
+           <input name="checkbox_name" id="servicesCard" type="checkbox"><span class="checkboxHeaders"> Services</span><br>
+           <input name="checkbox_name" id="mediaCard" type="checkbox"><span class="checkboxHeaders"> Media</span><br>
+         </div>
+        </div>
 
-    <div class="pageContainer">
-<div id = "collapseSummarySet" > <!-- entire summary card set -->
-<div id="container" class="sortable">
+        <div class="clickme summaryCard content_hidden content_option_contactCard contactCard " id="contactCarda">
+          <h3 class="cardHeader handle">Contacts <img class="summaryIcon"src="img/Phone-Book-128.png"></h3>
+          <div class="closeCard">
+            <span class="ui-icon  ui-icon-circle-close"></span>
+          </div>
+          <form id="search-form">
+            <input type="text" />
+            <input type="submit" value="Search" />
+          </form>
+          <div class="currentSummaryData clickData" data-details="info-contactCard-optionA"><span class="cardInfoChoice">Firsty McLasterson</span></div>
+          <div class="currentSummaryData clickData"data-details="info-contactCard-optionB"><span class="cardInfoChoice">Namey Name-Name</span></div>
+          <div class="currentSummaryData clickData" data-details="info-contactCard-optionC"><span class="cardInfoChoice">Watcha Callem</span></div>
+        </div>
 
+      <!--   Accounts -->
+        <div class="clickme summaryCard content_hidden content_option_accountCard accountCard" id="accountCarda">
+          <h3 class="cardHeader handle">Accounts <img class="summaryIcon"src="img/Accounts-Book-128.png"></h3>
+          <div class="closeCard">
+            <span class="ui-icon  ui-icon-circle-close"></span>
+          </div>
+          <form id="search-form">
+            <input type="text" />
+            <input type="submit" value="Search"/>
+          </form>  
+          <div class="currentSummaryData cardInfoChoice clickData "data-details="info-accountCard-optionA">Aviation Engineers</div>  <br />
+          <div class="currentSummaryData cardInfoChoice clickData" data-details="info-accountCard-optionB">National Association of Auto Body Specialists</div>
+        </div>
+<!-- End Accounts -->
 
-<div class="clickme summaryCard card1" id= "card1a"><h3 class="cardHeader">Personal Settings</h3>
-  <span class="addNewIcon ui-icon  ui-icon-circle-plus"></span>
-    <div id="large">
-<div class="ttip">
-  <div class="contents">Add Cards</div>
-   <span class="note addNewIcon ui-icon  ui-icon-circle-minus">Click here to close the</span> 
+<!-- Meetings -->
+        <div class="clickme summaryCard content_hidden content_option_meetingCard meetingCard" id="meetingCarda">
+          <h3 class="cardHeader handle">Meetings <img class="summaryIcon"src="img/Meeting-128.png"></h3>
+          <div class="closeCard">
+            <span class="ui-icon ui-icon-circle-close"></span>
+          </div> 
+          <form id="search-form">
+            <input type="text" />
+            <input type="submit" value="Search" />
+          </form>  
+          <div class="currentSummaryData clickData" data-details="info-meetingCard-optionA"><span class="cardInfoChoice">National Assiciation of Auto Body Specialists Meeting</span></div><br />
+          <div class="currentSummaryData clickData"data-details="info-meetingCard-optionB"><span class="cardInfoChoice">Aviation Engineers Meeting</span></div><br />
+          <div class="currentSummaryData clickData" data-details="info-meetingCard-optionC"><span class="cardInfoChoice">Educational Book Publishers Meeting</span></div>  <br />  
 </div>
-</div>
- <form id="search-form">
+       
+<!-- End Meetings -->
+
+
+
+
+     <!--    Bookings -->
+<div class="clickme summaryCard content_hidden content_option_bookingCard bookingCard" id="bookingCarda"><h3 class="cardHeader handle">Bookings <img class="summaryIcon"src="img/Books-128.png"></h3><div class="closeCard"><span class="ui-icon ui-icon-circle-close"></span></div>
+  <form id="search-form">
   <input type="text" />
   <input type="submit" value="Search" />
 </form>
-    <div id="addcontent" ><a href="summaryCard1.html">Summary Info 1</a>
-    </div>
-    <div class="personalizeCardSelection">                   
- <input name="checkbox_name" id="card2" type="checkbox" > Card 2<br>
- <input name="checkbox_name" id="card3" type="checkbox" > Card 3<br>
- <input name="checkbox_name" id="card4" type="checkbox" > Card 4<br>
- <input name="checkbox_name" id="card5" type="checkbox" > Card 5<br>
- <input name="checkbox_name" id="card6" type="checkbox" > Card 6<br>
- <input name="checkbox_name" id="card7" type="checkbox" > Card 7<br>
- <input name="checkbox_name" id="card8" type="checkbox" > Card 8<br>
-</div>
-</div>
-<div class="clickme summaryCard content_hidden content_option_card2 card2 " id="card2a"><h3 class="cardHeader handle">Card 2</h3><div class="closeCard"><span class="ui-icon  ui-icon-circle-close"></span></div>
- <form id="search-form">
-  <input type="text" />
-  <input type="submit" value="Search" />
-</form>
-  <div class="currentSummaryData clickData" data-details="info-Card2-optionA">Summary Info 1</div>
-    <div class="currentSummaryData clickData"data-details="info-Card2-optionB">Summary Info 2</div>
-    <div class="currentSummaryData clickData" data-details="info-Card2-optionC">Summary Info 3</div>
 
+<div class="currentSummaryData clickData" data-details="info-bookingCard-optionA"><span class="cardInfoChoice">National Assiciation of Auto Body Specialists Regional Meeting</span></div><br />
+          <div class="currentSummaryData clickData"data-details="info-bookingCard-optionB"><span class="cardInfoChoice">Aviation Engineers National Conference 2017</span></div><br />
+          <div class="currentSummaryData clickData" data-details="info-bookingCard-optionC"><span class="cardInfoChoice">Educational Book Publishers Conference 2015</span></div>  <br />  
 </div>
+<!-- End Bookings -->
 
-<div class="clickme summaryCard content_hidden content_option_card3 card3 " id="card3a"><h3 class="cardHeader handle">Card 3</h3><div class="closeCard"><span class="ui-icon  ui-icon-circle-close"></span></div>
+
+<!-- Traces/Notes -->
+<div class="clickme summaryCard content_hidden content_option_tracesNotesCard tracesNotesCard" id="tracesNotesCarda"><h3 class="cardHeader handle">Traces/Notes <img class="summaryIcon"src="img/Note-01-128.png"></h3><div class="closeCard"><span class="ui-icon  ui-icon-circle-close"></span></div>
   <form id="search-form">
   <input type="text" />
   <input type="submit" value="Search" />
-</form>  
-<div class="currentSummaryData clickData"data-details="info-HelloExample">Summary Info 2</div>
+</form> 
+<div class="currentSummaryData clickData" data-details="info-tracesNotesCard-optionA"><span class=""> sent booking notices about National Assiciation of Auto Body Specialists Regional Meeting</span></div><br />
+          <div class="currentSummaryData clickData"data-details="info-tracesNotesCard-optionB"><span class="">emailed the coordinator at the hotel about the suite reservation mix-up for the Aviation Engineers National Conference 2017</span></div><br />
+          <div class="currentSummaryData clickData" data-details="info-tracesNotesCard-optionC"><span class="">site visit schedule approved byEducational Book Publishers Conference 2015</span></div>  <br />  
+</div>    
 
-    <div class="currentSummaryData clickData" data-details="info-HowdyExample">Summary Info 3</div>
-</div>
-<div class="clickme summaryCard content_hidden content_option_card4 card4" id="card4a"><h3 class="cardHeader handle">Card 4</h3><div class="closeCard"><span class="ui-icon  ui-icon-circle-close"></span></div> <form id="search-form">
-  <input type="text" />
-  <input type="submit" value="Search" />
-</form>  
-</div>
+<!-- End Traces/Notes -->
 
-<div class="clickme summaryCard content_hidden content_option_card5 card5" id="card5a"><h3 class="cardHeader handle">Card 5</h3><div class="closeCard"><span class="ui-icon  ui-icon-circle-close"></span></div>
+
+<!-- Services -->
+<div class="clickme summaryCard content_hidden content_option_servicesCard servicesCard" id="servicesCarda"><h3 class="cardHeader handle">Services <img class="summaryIcon"src="img/Banner-128.png"></h3><div class="closeCard"><span class="ui-icon  ui-icon-circle-close"></span></div>
   <form id="search-form">
   <input type="text" />
   <input type="submit" value="Search" />
-</form>    
+</form>   
+<div class="currentSummaryData clickData" data-details="info-servicesCard-optionA"><span class="cardInfoChoice">Service is Important</span></div>
+          <div class="currentSummaryData clickData"data-details="info-servicesCard-optionB"><span class="cardInfoChoice">Good Service</span></div>
+          <div class="currentSummaryData clickData" data-details="info-servicesCard-optionC"><span class="cardInfoChoice">Service Speical</span></div> 
 </div>
+<!-- End Services -->
 
-<div class="clickme summaryCard content_hidden content_option_card6 card6" id="card6a"><h3 class="cardHeader handle">Card 6</h3><div class="closeCard"><span class="ui-icon  ui-icon-circle-close"></span></div>
+
+<!-- Media -->
+<div class="clickme summaryCard content_hidden content_option_mediaCard mediaCard" id="mediaCarda"><h3 class="cardHeader handle">Media <img class="summaryIcon"src="img/News-Broadcast-128.png"></h3><div class="closeCard"><span class=" ui-icon  ui-icon-circle-close"></span></div>
   <form id="search-form">
   <input type="text" />
   <input type="submit" value="Search" />
-</form>     
+</form>   
+<div class="currentSummaryData clickData" data-details="info-mediaCard-optionA"><span class="cardInfoChoice">Media-riffic</span></div>
+          <div class="currentSummaryData clickData"data-details="info-mediaCard-optionB"><span class="cardInfoChoice">Good Media</span></div>
+          <div class="currentSummaryData clickData" data-details="info-mediaCard-optionC"><span class="cardInfoChoice">Media mania</span></div> 
+</div>
+<!-- End Media -->
+
 </div>
 
-<div class="clickme summaryCard content_hidden content_option_card7 card7" id="card7a"><h3 class="cardHeader handle">Card 7</h3><div class="closeCard"><span class="ui-icon  ui-icon-circle-close"></span></div>
-  <form id="search-form">
-  <input type="text" />
-  <input type="submit" value="Search" />
-</form>    
-</div>
-
-<div class="clickme summaryCard content_hidden content_option_card8 card8" id="card8a"><h3 class="cardHeader handle">Card 8</h3><div class="closeCard"><span class=" ui-icon  ui-icon-circle-close"></span></div>
-  <form id="search-form">
-  <input type="text" />
-  <input type="submit" value="Search" />
-</form>    
-</div>
 </div> <!-- Container -->
 <!-- <hr> -->
 </div> <!-- CollapseSummarySet -->
+<!-- End Summary Cards -->
+
+
   
   <div class="clear"></div>
 <div class = "lowerContent sortable">
 <div id="inserthere"></div>
-<div class ="clickedSummaryData card3" id="info-HelloExample"><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div><h1 class= "handle">Summary Info 2</h1>
-  <br><div class= " row full-width"> 
-      <input type="button" id="togglebuttonGridPod" value="toggle grid and pod"/>
+
+<!-- Second Tier Info Boxes start here -->
+
+<!-- Account Card starts here -->
+<div class ="clickedSummaryData accountsHandle" id="info-accountCard-optionA">
+  <div class="closeInfoBox"><img class =" icon1"src="img/Close-128.png" alt="">
+ 
+  <h1 class="handle  accountCard">Aviation Engineers</h1><br>
+  <div class= " row full-width"> 
+     </div>
+     <!--  <input type="button" class="togglebuttonGridPod" value="toggle grid and pod"/>
+    <div class="gridView"> -->
+
+    <!--   <fieldset>
+        <legend class= "handle">Fake Grid Content</legend>
+          <div class = "large-12 columns">
+            <table width="101%" border="0" class="display example">
+              <thead>
+                  <tr>
+                    <th width="15%" scope="col">Lead Date </th>
+                    <th width="25%" scope="col">IP Name</th>
+                    <th width="10%" scope="col">Lead Status</th>
+                    <th width="10%" scope="col">Date Viewed on Web</th>
+                    <th width="10%" scope="col">Responded?</th>
+                    <th width="10%" scope="col">Proposal?</th>
+                    <th width="10%" scope="col">Initial Resp</th>
+                    <th width="10%" scope="col">Updated Resp</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td >engine1</td>
+                      <td contentEditable>Hilton</td>
+                      <td>T2</td>
+                      <td>c</td>
+                      <td>d</td>
+                      <td>e</td>
+                       <td>d</td>
+                      <td>e</td>
+                  </tr>
+                  <tr>
+                      <td>engine2</td>
+                      <td contentEditable>DoubleTree</td>
+                      <td>T1</td>
+                      <td>c</td>
+                      <td>d</td>
+                      <td>e</td>
+                       <td>d</td>
+                      <td>e</td>
+                  </tr>
+                  <tr>
+                      <td>engine3</td>
+                      <td contentEditable>Omni</td>
+                      <td>T1</td>
+                      <td>c</td>
+                      <td>d</td>
+                      <td>e</td>
+                       <td>d</td>
+                      <td>e</td>
+                  </tr>
+              </tbody>
+          </table>
+      </fieldset> -->
+
+
+    <!-- </div> --> <!-- gridview -->
+
+ <!--  <div class = "podView">
+    <section class="summaryBox">
+      <header class = "bookingsHeader">
+       <a href="#" class = "" data-id=""><h3>Bob Smith</h3><p>bob@smith.com</p></a></header>           
+    </section>
+  </div> -->
+
+       </div> <!-- row full-width End -->
+</div> <!-- Account Card End -->
+
+<div class ="clickedSummaryData accountsHandle sortable" id="info-accountCard-optionB">
+   <div class="closeInfoBox"><img class =" icon1"src="img/Close-128.png" alt="">
+    
+  <h1 class="handle accountCard">National Association of Auto Body Specialists  <img  class ="lowerheaderbarIcon" src="img/meeting-128.png"><img class="lowerheaderbarIcon"src="img/Books-128.png"><img src="img/Phone-Book-128.png" alt="" class="lowerheaderbarIcon"></h1>
+
+</div>
+</div>
+
+
+<!-- Contact  Info starts here -->
+
+<div class ="clickedSummaryData secondLevelInfo" id="info-contactCard-optionA">
+  <div class="closeInfoBox">
+    <span class="icon1 ui-icon  ui-icon-circle-close"></span>
+  </div>
+  <h1 class= "handle contactsHandle contactCard">Firsty McLasterson</h1>
+    <a class="expander expanded" href="#">clickme</a>
+       <div class="">Click on an item to get more information.
+          <p>
+            <span class= "currentSummaryData clickData"data-details="contactCardDetailsItem1">Item1</span>
+            <span class= "currentSummaryData clickData"data-details="contactCardDetailsItem2">Item2</span> 
+            <span class= "currentSummaryData clickData"data-details="contactCardDetailsItem3">Item3</span>
+            <span class= "currentSummaryData clickData"data-details="contactCardDetailsItem4">Item4</span>
+          </p>
+       </div>
+<h4>Here you can see all of the main detail information.</h4>
+</div>
+
+<div class="content sortable">
+<div class ="clickedSummaryData thirdLevelInfo" id="contactCardDetailsItem1"><h4 class ="handle contactCard">Header for Item 1</h4><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div>
+<h3>This foo is what you see when you click on the 1st item of Card 2.</h3><div>Click on the  foo to get more information.</div></div>
+
+<div class ="clickedSummaryData thirdLevelInfo" id="contactCardDetailsItem2"><h4 class ="handle contactCard">Header for Item 2</h4><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div>
+<h3>This foo is what you see when you click on the 2nd item of Card 2.</h3><div>Click on the  foo to get more information.</div></div>
+
+<div class ="clickedSummaryData thirdLevelInfo" id="contactCardDetailsItem3"><h4 class ="handle contactCard">Header for Item 3</h4><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div>
+<h3>This foo is what you see when you click on the 3rd item of Card 2.</h3><div>Click on the  foo to get more information.</div></div>
+
+<div class ="clickedSummaryData thirdLevelInfo" id="contactCardDetailsItem4"><h4 class ="handle contactCard">Header for Item 4</h4><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div>
+<h3>This foo is what you see when you click on the 4th item of Card 2.</h3><div class = "row ">
+<fieldset>
+  <legend class= "handle">Meeting Dates</legend>
+  <div class = "large-6 columns">
+                
+
+                  <div class="row">
+                      <div class="small-6 columns marginAdjust">
+                          <label for="right-label" class="right inline">Arrival Date</label>
+                      </div>
+                      <div class="small-6 columns marginAdjust">
+                          <input type="date">
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="small-6 columns marginAdjust">
+                          <label for="right-label" class="right inline">Departure Date</label>
+                      </div>
+                      <div class="small-6 columns marginAdjust">
+                          <input type="date">
+                      </div>
+                  </div>
+       
+                  <div class="row">
+                      <div class="small-6 columns marginAdjust">
+                          <label for="right-label" class="right inline">Meeting Start Date</label>
+                      </div>
+                      <div class="small-6 columns marginAdjust">
+                          <input type="date">
+                      </div>
+                  </div>
+
+                 <div class="row">
+                     <div class="small-6 columns marginAdjust">
+                         <label for="right-label" class="right inline">Meeting End Date </label>
+                     </div>
+                     <div class="small-6 columns marginAdjust">
+                         <input type="date">
+                     </div>
+                 </div>
+              </div>
+               <div class = "large-6 columns">
+                  <div class="row">
+                      <div class="small-6 columns marginAdjust2">
+                          <label for="right-label" class="right inline">Exhibit Move In Begin Date</label>
+                      </div>
+                      <div class="small-6 columns marginAdjust2">
+                          <input type="date">
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="small-6 columns marginAdjust2">
+                          <label for="right-label" class="right inline">Exhibit Move In End Date</label>
+                      </div>
+                      <div class="small-6 columns marginAdjust2">
+                          <input type="date">
+                      </div>
+                  </div>
+       
+                  <div class="row">
+                      <div class="small-6 columns marginAdjust2">
+                          <label for="right-label" class="right inline">Exhibit Move Out Begin Date</label>
+                      </div>
+                      <div class="small-6 columns marginAdjust2">
+                          <input type="date">
+                      </div>
+                  </div>
+
+                 <div class="row">
+                     <div class="small-6 columns marginAdjust2">
+                         <label for="right-label" class="right inline">Exhibit Move Out End Date </label>
+                     </div>
+                     <div class="small-6 columns marginAdjust2">
+                         <input type="date">
+                     </div>
+                 </div>
+
+              </div>
+    </fieldset>
+</div> 
+</div>
+</div> <!-- content class for expand/collapse all third level divs -->
+
+<div class ="clickedSummaryData contactsHandle secondLevelInfo" id="info-contactCard-optionB"><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div><h1 class= "handle contactCard" >Namey Name-Name</h1>
+<div class= " row full-width"> 
+
+      <input type="button" class="togglebuttonGridPod" value="toggle grid and pod"/>
       <div class="gridView">
 <!-- <div class = "row content_hidden leadsSent"> -->
 <fieldset>
@@ -175,43 +427,42 @@
     </div>
 
        </div>
+<!-- <h3>This foo is important.</h3><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div> -->
+
 </div>
 
-<div class ="clickedSummaryData card3 sortable" id="info-HowdyExample"><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div> <h1 class="handle"> Data Example</h1></div>
+<div class ="clickedSummaryData contactCard secondLevelInfo" id="info-contactCard-optionC"><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div><h1 class= "handle contactsHandle">Summary Info Card 2 Option3</h1>
+<h3>This foo is important.</h3><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div></div>
 
 
-<!-- Card 2  Info starts here -->
+<!-- BookingView -->
 
-<div class ="clickedSummaryData secondLevelInfo" id="info-Card2-optionA">
-
+<div class ="clickedSummaryData secondLevelInfo" id="info-bookingCard-optionA">
   <div class="closeInfoBox">
     <span class="icon1 ui-icon  ui-icon-circle-close"></span>
   </div>
-  <h1 class= "handle card2">Summary Info Card 2 Option1</h1><a class="expander expanded" href="#">clickme</a>
+  <h1 class= "handle bookingsHandle bookingCard">National Association of Auto Body Specialists Regional Meeting</h1>
+    <a class="expander expanded" href="#">clickme</a>
        <div class="">Click on an item to get more information.
-        <p><span class = "currentSummaryData clickData" data-details="card2DetailsItem1">Item1</span>
-         <span class = "currentSummaryData clickData" data-details="card2DetailsItem2">Item2</span> 
-         <span class = "currentSummaryData clickData" data-details="card2DetailsItem3">Item3</span>
-         <span class = "currentSummaryData clickData" data-details="card2DetailsItem4">Item4</span>
-        </p>
-     </div>
-<h4>Here you can see all of the main detail information.</h4>
+          <p>
+            <span class= "currentSummaryData clickData"data-details="bookingCardDetailsItem1">Meeting Dates</span>
+            <span class= "currentSummaryData clickData"data-details="bookingCardDetailsItem2">Traces/Notes</span> 
+            <span class= "currentSummaryData clickData"data-details="bookingCardDetailsItem3">Roomflow</span>
+            <span class= "currentSummaryData clickData"data-details="bookingCardDetailsItem4">Leads Sent</span>
+            <span class= "currentSummaryData clickData"data-details="bookingCardDetailsItem5">Services</span>
+            <span class= "currentSummaryData clickData"data-details="bookingCardDetailsItem6">Attachments</span>
+            <span class= "currentSummaryData clickData"data-details="bookingCardDetailsItem7">Lost Buisiness</span>
+          </p>
+       </div>
+<p>Here you can see all of the main detail information.</p>
 </div>
 
 <div class="content sortable">
-<div class ="clickedSummaryData thirdLevelInfo" id="card2DetailsItem1"><h4 class ="handle card2">Header for Item 1</h4><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div>
-<h3>This foo is what you see when you click on the 1st item of Card 2.</h3><div>Click on the  foo to get more information.</div></div>
-
-<div class ="clickedSummaryData thirdLevelInfo" id="card2DetailsItem2"><h4 class ="handle card2">Header for Item 2</h4><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div>
-<h3>This foo is what you see when you click on the 2nd item of Card 2.</h3><div>Click on the  foo to get more information.</div></div>
-
-<div class ="clickedSummaryData thirdLevelInfo" id="card2DetailsItem3"><h4 class ="handle card2">Header for Item 3</h4><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div>
-<h3>This foo is what you see when you click on the 3rd item of Card 2.</h3><div>Click on the  foo to get more information.</div></div>
-
-<div class ="clickedSummaryData thirdLevelInfo" id="card2DetailsItem4"><h4 class ="handle card2">Header for Item 4</h4><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div>
-<h3>This foo is what you see when you click on the 4th item of Card 2.</h3><div class = "row ">
-<fieldset>
-  <legend class= "handle">Meeting Dates</legend>
+<div class ="clickedSummaryData thirdLevelInfo" id="bookingCardDetailsItem1"><h4 class ="handle bookingsHandle bookingCard">Meeting  <img src="img/Add-New-32.png"></h4><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div>
+<!-- <h3>This foo is what you see when you click on the 4th item of Card 2.</h3> -->
+<div class = "row ">
+<!-- <fieldset>
+  <legend class= "handle">Meeting Dates</legend> -->
   <div class = "large-6 columns">
                 
 
@@ -220,7 +471,7 @@
                           <label for="right-label" class="right inline">Arrival Date</label>
                       </div>
                       <div class="small-6 columns marginAdjust">
-                          <input type="date"  >
+                          <input type="date">
                       </div>
                   </div>
 
@@ -229,7 +480,7 @@
                           <label for="right-label" class="right inline">Departure Date</label>
                       </div>
                       <div class="small-6 columns marginAdjust">
-                          <input type="date"   >
+                          <input type="date">
                       </div>
                   </div>
        
@@ -238,7 +489,7 @@
                           <label for="right-label" class="right inline">Meeting Start Date</label>
                       </div>
                       <div class="small-6 columns marginAdjust">
-                          <input type="date"  >
+                          <input type="date">
                       </div>
                   </div>
 
@@ -247,23 +498,17 @@
                          <label for="right-label" class="right inline">Meeting End Date </label>
                      </div>
                      <div class="small-6 columns marginAdjust">
-                         <input type="date"  >
+                         <input type="date">
                      </div>
                  </div>
-
               </div>
-
-
-
                <div class = "large-6 columns">
-                
-
                   <div class="row">
                       <div class="small-6 columns marginAdjust2">
                           <label for="right-label" class="right inline">Exhibit Move In Begin Date</label>
                       </div>
                       <div class="small-6 columns marginAdjust2">
-                          <input type="date"  >
+                          <input type="date">
                       </div>
                   </div>
 
@@ -272,7 +517,7 @@
                           <label for="right-label" class="right inline">Exhibit Move In End Date</label>
                       </div>
                       <div class="small-6 columns marginAdjust2">
-                          <input type="date"   >
+                          <input type="date">
                       </div>
                   </div>
        
@@ -281,7 +526,7 @@
                           <label for="right-label" class="right inline">Exhibit Move Out Begin Date</label>
                       </div>
                       <div class="small-6 columns marginAdjust2">
-                          <input type="date"  >
+                          <input type="date">
                       </div>
                   </div>
 
@@ -290,29 +535,39 @@
                          <label for="right-label" class="right inline">Exhibit Move Out End Date </label>
                      </div>
                      <div class="small-6 columns marginAdjust2">
-                         <input type="date"  >
+                         <input type="date">
                      </div>
                  </div>
 
               </div>
-    </fieldset>
-</div> <div>Click on the  foo! to get more information.</div></div>
-</div> <!-- content class for expand/collapse all third level divs -->
-
-
-
-
-
-
-
-
-<div class ="clickedSummaryData card2 secondLevelInfo" id="info-Card2-optionB"><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div><h1 class= "handle" >Summary Info Card 2 Option2</h1>
-<h3>This foo is important.</h3><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div>
-
+   <!--  </fieldset> -->
+</div> 
 </div>
 
-<div class ="clickedSummaryData card2 secondLevelInfo" id="info-Card2-optionC"><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div><h1 class= "handle">Summary Info Card 2 Option3</h1>
-<h3>This foo is important.</h3><div class="currentSummaryData" data-details="info-SummaryInfo1">Click on the  foo to get more information.</div></div>
+<div class ="clickedSummaryData thirdLevelInfo" id="bookingCardDetailsItem2"><h4 class ="handle bookingCard">Header for Item 2</h4><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div>
+<h3>This foo is what you see when you click on the 2nd item of Card 2.</h3><div>Click on the  foo to get more information.</div></div>
+
+<div class ="clickedSummaryData thirdLevelInfo" id="bookingCardDetailsItem3"><h4 class ="handle bookingCard">Header for Item 3</h4><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div>
+<h3>This foo is what you see when you click on the 3rd item of Card 2.</h3><div>Click on the  foo to get more information.</div></div>
+
+<div class ="clickedSummaryData thirdLevelInfo" id="bookingCardDetailsItem4"><h4 class ="handle bookingCard">Header for Item 1</h4><div class="closeInfoBox"><span class="icon1 ui-icon ui-icon-circle-close"></span></div>
+<h3>This foo is what you see when you click on the 1st item of Card 2.</h3><div>Click on the  foo to get more information.</div></div>
+
+
+</div> <!-- content class for expand/collapse all third level divs -->
+<!-- End Booking Info -->
+
+
+
+
+
+
+
+
+
+
+
+
 </div> <!-- lowerContent -->
 </div><!-- pageContainer -->
 
